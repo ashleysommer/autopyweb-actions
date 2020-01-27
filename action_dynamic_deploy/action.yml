@@ -1,0 +1,22 @@
+name: "Autopyweb Deploy"
+description: "Custom action that pushes to our autopyweb dynamic deployment endpoint."
+inputs:
+  dynamic_deploy_endpoint:
+    default: "https://example.org/"
+    required: true
+    description: "Where to deliver the deploy instructions to"
+  prevent_from_forks:
+    default: "true"
+    required: false
+    description: "When enabled, disallows autodeploys from PRs from Forks of this repo"
+
+
+outputs:
+  success:
+    description: "Successful deploy"
+
+runs:
+  using: node12
+  main: "dist/index.js"
+
+

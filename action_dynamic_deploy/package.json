@@ -1,0 +1,21 @@
+{
+  "name": "action_dynamic_deploy",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "compile": "npx ncc build index.js -m",
+    "watch": "npx ncc build index.js -m -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Proprietary",
+  "dependencies": {
+    "@actions/core": "^1.2.1",
+    "@actions/github": "^2.0.1",
+    "axios": "^0.19.1"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.21.0"
+  }
+}
